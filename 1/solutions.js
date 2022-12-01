@@ -21,5 +21,5 @@ console.log(
   elfTotals
     .sort((a, b) => b - a)
     .slice(0, 3)
-    .filter((a, c) => a + c, 0)
+    .reduce((a, c) => a + c, 0)
 );
