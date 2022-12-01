@@ -1,4 +1,4 @@
-export const input = `9195
+export const input: string = `9195
 5496
 2732
 8364

@@ -1,10 +1,10 @@
 import { input } from "./input";
 
-const splitInput = input.split(/\n/);
-let elfTotals = [];
-let currentElfCalories = 0;
+const splitInput: string[] = input.split(/\n/);
+let elfTotals: number[] = [];
+let currentElfCalories: number = 0;
 
-splitInput.forEach((item) => {
+splitInput.forEach((item: string) => {
   if (item) {
     currentElfCalories += parseInt(item);
   } else {
