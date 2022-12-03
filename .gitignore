@@ -1,1 +1,4 @@
 .DS_Store
+node_modules
+input.ts
+input.js
