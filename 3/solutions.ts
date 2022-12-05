@@ -1,5 +1,5 @@
 import input from './input'
-import { breakInputByLine } from '../utils'
+import { splitInputByLine } from '../utils'
 
 const alphabet = `abcdefghijklmnopqrstuvwxyz`
 const lowercaseAlpha: string[] = alphabet.split('')
@@ -11,7 +11,7 @@ const splitStringInHalf = (string: string): string[] => {
   return [string.substring(0, halfwayPoint), string.substring(halfwayPoint, string.length)]
 }
 
-const inputLines = breakInputByLine(input)
+const inputLines = splitInputByLine(input)
 const splitInputs = inputLines.map(line => splitStringInHalf(line))
 
 const findMatchingItemInLine = (line: string[]): string => {
