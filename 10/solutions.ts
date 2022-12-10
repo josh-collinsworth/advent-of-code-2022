@@ -163,20 +163,15 @@ const partOne = (): number => {
   }
   
   input.forEach((line: string) => {
+    checkForSignal()
+    cycleNumber++
     if (line.startsWith('addx ')) {
       const numberToAdd = parseInt(line.slice(5))
       checkForSignal()
       cycleNumber++
-      checkForSignal()
-      cycleNumber++
       currentValue += numberToAdd
-    } else {
-      checkForSignal()
-      cycleNumber++
     }
   })
-  
-  // console.log(measuredSignals)
   
   return measuredSignals.reduce((a, c) => a + c, 0)
 }
@@ -189,6 +184,7 @@ const partTwo = (): string => {
   let cycleNumber = 1
   let screen: string[][] = []
 
+  //For some reason TypeScript didn't like creating a nested array with shorter methods, so we use this one. ¯\_(ツ)_/¯
   for (let row = 0; row < 6; row++) {
     screen.push([])
     for (let col = 0; col < 40; col++) {
@@ -207,14 +203,12 @@ const partTwo = (): string => {
   }
 
   input.forEach((line: string) => {
+    checkForSignal()
     if (line.startsWith('addx ')) {
       const numberToAdd = parseInt(line.slice(5))
-      checkForSignal()
       cycleNumber++
       checkForSignal()
       spritePosition += numberToAdd
-    } else {
-      checkForSignal()
     }
     cycleNumber++
   })
