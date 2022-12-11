@@ -81,6 +81,18 @@ interface Coordinates {
 const headCoords: Coordinates = { y: 300 , x: 300 }
 const tailCoords: Coordinates = { y: 300 , x: 300 }
 
+const tailGroup: Coordinates[] = [
+  /* 1 */ { y: 300 , x: 300 },
+  /* 2 */ { y: 300 , x: 300 },
+  /* 3 */ { y: 300 , x: 300 },
+  /* 4 */ { y: 300 , x: 300 },
+  /* 5 */ { y: 300 , x: 300 },
+  /* 6 */ { y: 300 , x: 300 },
+  /* 7 */ { y: 300 , x: 300 },
+  /* 8 */ { y: 300 , x: 300 },
+  /* 9 */ { y: 300 , x: 300 },
+]
+
 const makeMove = (dir: string, stepCount: string) => {
   let steps = parseInt(stepCount)
   while (steps > 0) {
